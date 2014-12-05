@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/bottom_border"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/day_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:gravity="center_horizontal"
+        android:text="Tuesday"
+        android:fontFamily="sans-serif-thin"
+        android:textColor="#414042"
+        android:textSize="12sp"/>
+
+    <LinearLayout
+        android:id="@+id/weather_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/day_name"
+        android:layout_centerHorizontal="true"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/min_temp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="5°"
+            android:fontFamily="sans-serif-thin"
+            android:textColor="#414042"
+            android:textSize="12sp"
+            android:gravity="center_horizontal"
+            android:layout_gravity="bottom"/>
+
+        <ImageView
+            android:id="@+id/weather_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/s03d"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/max_temp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="12°"
+            android:fontFamily="sans-serif-thin"
+            android:textColor="#414042"
+            android:textSize="12sp"
+            android:gravity="center_horizontal"
+            android:layout_gravity="bottom"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/weather_condition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/weather_info"
+        android:text="Cloudy"
+        android:fontFamily="sans-serif-thin"
+        android:textColor="#414042"
+        android:textSize="12sp"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

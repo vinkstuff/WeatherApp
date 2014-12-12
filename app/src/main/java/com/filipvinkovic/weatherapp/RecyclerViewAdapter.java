@@ -14,10 +14,10 @@ import java.util.List;
  */
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
 
-    private List<WeatherInfo> weatherInfoList;
+    private List<WeatherData> weatherDataList;
 
-    public RecyclerViewAdapter(List<WeatherInfo> weatherInfoList) {
-        this.weatherInfoList = weatherInfoList;
+    public RecyclerViewAdapter(List<WeatherData> weatherDataList) {
+        this.weatherDataList = weatherDataList;
     }
 
     @Override
@@ -28,16 +28,43 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
-        WeatherInfo weatherInfo = weatherInfoList.get(position);
-        viewHolder.dayName.setText(weatherInfo.getDayName());
-        viewHolder.weatherCondition.setText(weatherInfo.getWeatherCondition());
-        viewHolder.minTemp.setText(weatherInfo.getMinTemp() + "°");
-        viewHolder.maxTemp.setText(weatherInfo.getMaxTemp() + "°");
+        /*WeatherData weatherData = weatherDataList.get(position);
+        viewHolder.dayName.setText(weatherData.getDayName());
+        viewHolder.weatherCondition.setText(weatherData.getWeatherCondition());
+        viewHolder.minTemp.setText(weatherData.getMinTemp() + "°");
+        viewHolder.maxTemp.setText(weatherData.getMaxTemp() + "°");
+
+        switch (weatherData.getWeatherCondition()) {
+            case "Cloudy":
+                viewHolder.weatherIcon.setImageResource(R.drawable.s03d);
+                break;
+            case "Partly Cloudy":
+                viewHolder.weatherIcon.setImageResource(R.drawable.s02d);
+                break;
+            case "Rain":
+                viewHolder.weatherIcon.setImageResource(R.drawable.s09d);
+                break;
+            case "Fog":
+                viewHolder.weatherIcon.setImageResource(R.drawable.s50d);
+                break;
+            case "Thunderstorm":
+                viewHolder.weatherIcon.setImageResource(R.drawable.s11d);
+                break;
+            case "Snow":
+                viewHolder.weatherIcon.setImageResource(R.drawable.s13d);
+                break;
+            case "Sunny":
+                viewHolder.weatherIcon.setImageResource(R.drawable.s01d);
+                break;
+            case "Raind and sun":
+                viewHolder.weatherIcon.setImageResource(R.drawable.s10d);
+                break;
+        }*/
     }
 
     @Override
     public int getItemCount() {
-        return weatherInfoList.size();
+        return weatherDataList.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {

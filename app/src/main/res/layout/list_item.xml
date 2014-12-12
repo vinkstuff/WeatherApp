@@ -32,7 +32,7 @@
             android:text="5°"
             android:fontFamily="sans-serif-thin"
             android:textColor="#414042"
-            android:textSize="12sp"
+            android:textSize="10sp"
             android:gravity="center_horizontal"
             android:layout_gravity="bottom"/>
 
@@ -52,7 +52,7 @@
             android:text="12°"
             android:fontFamily="sans-serif-thin"
             android:textColor="#414042"
-            android:textSize="12sp"
+            android:textSize="10sp"
             android:gravity="center_horizontal"
             android:layout_gravity="bottom"/>
 

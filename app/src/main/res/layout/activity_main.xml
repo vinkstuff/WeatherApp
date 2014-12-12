@@ -2,13 +2,109 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:id="@+id/root_view">
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="0.7"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:background="#d56b3d"
         android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Today"
+            android:fontFamily="sans-serif-thin"
+            android:textSize="24sp"
+            android:textColor="@android:color/white"/>
+
+        <ImageView
+            android:id="@+id/weather_icon_today"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/weather_condition_today"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Partly Cloudy"
+            android:fontFamily="sans-serif-thin"
+            android:textSize="34sp"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/min_max_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Min 5° - Max 12°"
+            android:fontFamily="sans-serif-thin"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/current_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="10°"
+            android:fontFamily="sans-serif-thin"
+            android:textSize="100sp"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/night_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-20dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Night 2°"
+            android:fontFamily="sans-serif-thin"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/location_white_icon"/>
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Zagreb"
+                android:fontFamily="sans-serif-thin"
+                android:textSize="40sp"
+                android:textColor="@android:color/white"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="5.12.2014."
+            android:fontFamily="sans-serif-thin"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"/>
 
     </LinearLayout>
     <LinearLayout

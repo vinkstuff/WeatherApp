@@ -26,7 +26,7 @@ public class WeatherAPI {
     public static WeatherService getApiService() {
 
         RestAdapter restAdapter = new RestAdapter.Builder().
-                                    setEndpoint(URL).build();
+                setEndpoint(URL).build();
 
         weatherService = restAdapter.create(WeatherService.class);
 

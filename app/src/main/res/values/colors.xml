@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="sunny">#d53d3d</color>
+    <color name="partly_cloudy">#d56b3d</color>
+    <color name="rain_and_sun">#d5c13d</color>
+    <color name="cloudy">#6d9934</color>
+    <color name="light_rain">#948975</color>
+    <color name="rain">#4f4d48</color>
+    <color name="snow">#3da5d5</color>
+    <color name="thunderstorm">#1f6671</color>
+    <color name="fog">#532d4a</color>
+    <color name="settings_screen">#414042</color>
+</resources>

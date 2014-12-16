@@ -1,4 +1,4 @@
-package com.filipvinkovic.weatherapp;
+package com.filipvinkovic.weatherapp.rest;
 
 import retrofit.Callback;
 import retrofit.RestAdapter;

@@ -1,4 +1,4 @@
-package com.filipvinkovic.weatherapp;
+package com.filipvinkovic.weatherapp.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -7,6 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.filipvinkovic.weatherapp.R;
+import com.filipvinkovic.weatherapp.rest.WeatherData;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -34,7 +37,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
         Date currentDate = new Date(Long.parseLong(weatherData.get(position).unixDate)*1000);
-        SimpleDateFormat format = new SimpleDateFormat("E");
+        SimpleDateFormat format = new SimpleDateFormat("EEEE");
         final int iconId = ctx.getResources().getIdentifier("s" + weatherData.get(position).weather.get(0).icon, "drawable", ctx.getPackageName());
 
         viewHolder.dayName.setText(format.format(currentDate));

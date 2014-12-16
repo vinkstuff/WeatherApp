@@ -1,4 +1,4 @@
-package com.filipvinkovic.weatherapp;
+package com.filipvinkovic.weatherapp.rest;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -10,51 +10,61 @@ import java.util.List;
 public class WeatherData {
 
     @SerializedName("cod")
-    String cod;
+    public String cod;
     @SerializedName("city")
-    City city;
+    public City city;
     @SerializedName("list")
-    List<DailyWeather> dailyWeatherList;
+    public List<DailyWeather> dailyWeatherList;
 
     public class Temp {
 
         @SerializedName("day")
-        Double day;
+        public Double day;
         @SerializedName("min")
-        Double min;
+        public Double min;
         @SerializedName("max")
-        Double max;
+        public Double max;
         @SerializedName("night")
-        Double night;
+        public Double night;
     }
 
     public class Weather {
 
         @SerializedName("id")
-        int id;
+        public int id;
         @SerializedName("main")
-        String main;
+        public String main;
         @SerializedName("description")
-        String description;
+        public String description;
         @SerializedName("icon")
-        String icon;
+        public String icon;
     }
 
     public class DailyWeather {
 
         @SerializedName("dt")
-        String unixDate;
+        public String unixDate;
         @SerializedName("temp")
-        Temp temp;
+        public Temp temp;
         @SerializedName("weather")
-        List<Weather> weather;
+        public List<Weather> weather;
     }
 
     public class City {
 
         @SerializedName("id")
-        int id;
+        public int id;
         @SerializedName("name")
-        String name;
+        public String name;
+        @SerializedName("coord")
+        public Coord coord;
+    }
+
+    public class Coord {
+
+        @SerializedName("lat")
+        public Double lat;
+        @SerializedName("lon")
+        public Double lon;
     }
 }
